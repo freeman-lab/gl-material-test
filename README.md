@@ -1,8 +1,12 @@
 # gl-test-material
 
-Test your stack.gl materials!
+[![NPM version][npm-image]][npm-url]
+![experimental][experimental-image]
+[![js-standard-style][standard-image]][standard-url]
 
-This module provides a test function for validating that a material conforms to the definition in [`gl-material`](https://github.com/freeman-lab/gl-material). It creates a `gl` context, makes sure that your material yields a valid compiled shader, and has valid styles and defaults.
+Test your 3d materials!
+
+This module provides a test function for validating that a material conforms to the definition in [`gl-material`](https://github.com/freeman-lab/gl-material). It creates a `gl` context, makes sure that your material can generate a compiled shader, and has valid styles and defaults.
 
 ## install
 
@@ -14,7 +18,7 @@ npm install gl-test-material
 
 ## example
 
-Test a material by providing it alongside a test module (like `tape` or `tap`)
+Test a material by providing it alongside a test module like [`tape`](https://github.com/substack/tape) or [`tap`](https://github.com/tapjs/node-tap)
 
 ```javascript
 var test = require('tape')
@@ -37,10 +41,16 @@ var material = {
 require('gl-test-material')(test, material)
 ```
 
-If you put this inside a file `test.js`, you can run the tests by browserifying it and piping it to anything that runs tests in the browser. For example, your full test script could be `browserify test.js | testron | tap-spec`.
+If you put this inside a file `test.js`, you can run the tests by browserifying it and piping it to anything that runs tests in the browser like [`testron`](https://github.com/shama/testron). For example, your full test script could be `browserify test.js | testron | tap-spec`.
 
 ## usage
 
 #### `require('gl-test-material')(test, material, [constants])`
 
-Provide a `test` module (like `tape` or `tap`) and a `material` that conforms to the definition in [`gl-material`](https://github.com/freeman-lab/gl-material). Optionally provide an object of constants for performing string replacement. If your material doesn't use this feature, leave this argument out.
+Provide a `test` module like [`tape`](https://github.com/substack/tape) or [`tap`](https://github.com/tapjs/node-tap), and a `material` that conforms to the definition in [`gl-material`](https://github.com/freeman-lab/gl-material). Optionally provide an object of constants for performing string replacement. If your material doesn't use this feature, leave this argument out.
+
+[npm-image]: https://img.shields.io/badge/npm-v1.0.0-lightgray.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/control-panel
+[standard-image]: https://img.shields.io/badge/code%20style-standard-lightgray.svg?style=flat-square
+[standard-url]: https://github.com/feross/standard
+[experimental-image]: https://img.shields.io/badge/stability-experimental-lightgray.svg?style=flat-square
