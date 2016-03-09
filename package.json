@@ -1,0 +1,32 @@
+{
+  "name": "gl-test-material",
+  "version": "1.0.0",
+  "description": "test your stack.gl materials",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeman-lab/gl-test-material.git"
+  },
+  "keywords": [
+    "stackgl",
+    "gl",
+    "test",
+    "3d",
+    "webgl",
+    "material"
+  ],
+  "author": "freeman-lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freeman-lab/gl-test-material/issues"
+  },
+  "homepage": "https://github.com/freeman-lab/gl-test-material#readme",
+  "dependencies": {
+    "gl-context": "^0.1.1",
+    "lodash.foreach": "^4.1.0",
+    "tape": "^4.5.1"
+  }
+}
