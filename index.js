@@ -18,21 +18,21 @@ module.exports = function (test, material, constants) {
   })
 
   test('defaults', function (t) {
-    foreach(material.style, function (style, name) {
+    foreach(material.styles, function (style, name) {
       t.ok(style.default, 'default for "' + name + '"" defined')
     })
     t.end()
   })
 
   test('types', function (t) {
-    foreach(material.style, function (style, name) {
+    foreach(material.styles, function (style, name) {
       t.ok(style.type, 'type for "' + name + '" defined')
     })
     t.end()
   })
 
   test('shader: struct', function (t) {
-    if (material.style) {
+    if (material.styles) {
       var compiled = materialize(gl, material, constants)
       infragment(t, compiled.shader, 'struct Style')
       t.end()
@@ -40,7 +40,7 @@ module.exports = function (test, material, constants) {
   })
 
   test('shader: uniform', function (t) {
-    if (material.style) {
+    if (material.styles) {
       var compiled = materialize(gl, material, constants)
       infragment(t, compiled.shader, 'uniform Style style')
       t.end()
@@ -48,9 +48,9 @@ module.exports = function (test, material, constants) {
   })
 
   test('shader: types', function (t) {
-    if (material.style) {
+    if (material.styles) {
       var compiled = materialize(gl, material, constants)
-      foreach(material.style, function (style, name) {
+      foreach(material.styles, function (style, name) {
         infragment(t, compiled.shader, style.type + ' ' + name)
       })
     }
