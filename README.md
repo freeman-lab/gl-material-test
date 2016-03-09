@@ -41,6 +41,6 @@ If you put this inside a file `test.js`, you can run the tests by browserifying 
 
 ## usage
 
-#### `tester(test, material, [constants])`
+#### `require('gl-test-material')(test, material, [constants])`
 
 Provide a `test` module (like `tape` or `tap`) and a `material` that conforms to the definition in [`gl-material`](https://github.com/freeman-lab/gl-material). Optionally provide an object of constants for performing string replacement. If your material doesn't use this feature, leave this argument out.
