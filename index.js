@@ -12,6 +12,11 @@ module.exports = function (test, material, constants) {
     t.end()
   })
 
+  test('name', function (t) {
+    t.ok(material.name, 'has a name')
+    t.end()
+  })
+
   test('defaults', function (t) {
     foreach(material.style, function (style, name) {
       t.ok(style.default, 'default for "' + name + '"" defined')
