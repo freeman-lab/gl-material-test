@@ -1,6 +1,6 @@
 {
   "name": "gl-test-material",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "test your stack.gl materials",
   "main": "index.js",
   "scripts": {
