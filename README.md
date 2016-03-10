@@ -1,4 +1,4 @@
-# gl-test-material
+# gl-material-test
 
 [![NPM version][npm-image]][npm-url]
 ![experimental][experimental-image]
@@ -13,7 +13,7 @@ This module provides a test function for validating that a material conforms to 
 Add to your project with
 
 ```
-npm install gl-test-material
+npm install gl-material-test
 ```
 
 ## example
@@ -38,14 +38,14 @@ var material = {
   name: 'my-flat-material'
 }
 
-require('gl-test-material')(test, material)
+require('gl-material-test')(test, material)
 ```
 
 If you put this inside a file `test.js`, you can run the tests by browserifying it and piping it to anything that runs tests in the browser like [`testron`](https://github.com/shama/testron). For example, your full test script could be `browserify test.js | testron | tap-spec`.
 
 ## usage
 
-#### `require('gl-test-material')(test, material, [constants])`
+#### `require('gl-material-test')(test, material, [constants])`
 
 Provide a `test` module like [`tape`](https://github.com/substack/tape) or [`tap`](https://github.com/tapjs/node-tap), and a `material` that conforms to the definition in [`gl-material`](https://github.com/freeman-lab/gl-material). Optionally provide an object of constants for performing string replacement. If your material doesn't use this feature, leave this argument out.
 
